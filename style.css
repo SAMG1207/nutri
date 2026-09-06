@@ -1,0 +1,310 @@
+:root {
+  --lavanda: #b79cba;
+  --salvia: #8db5ac;
+  --salvia-oscuro: #3f5f58;
+  --melocoton: #f0a874;
+  --verde: #a8c08d;
+  --mostaza: #e5c87e;
+  --crema: #fcf6e7;
+  --tinta: #3a3238;
+  --clarito: #d1bfce;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--tinta);
+  background: var(--crema);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* NAV */
+.site-header {
+  background: rgba(252, 246, 231, 0.92);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(58, 50, 56, 0.08);
+}
+.brand-name {
+  font-family: "DM Serif Display", serif;
+  font-size: 18px;
+  color: var(--tinta);
+}
+.navbar-nav .nav-link {
+  color: var(--tinta);
+  font-weight: 500;
+  font-size: 14.5px;
+}
+
+.navbar-nav .nav-link {
+  color: var(--tinta);
+  font-weight: 500;
+  font-size: 14.5px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  background-color: var(--clarito);
+  color: var(--salvia-oscuro) !important;
+}
+
+/* HERO */
+.hero-title {
+  font-size: 46px;
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+  max-width: 720px;
+}
+.hero-caveat {
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--salvia-oscuro);
+  max-width: 42ch;
+  margin-bottom: 32px;
+}
+.btn-hero-primary {
+  background: #fdaa76;
+  color: var(--tinta);
+  font-weight: 600;
+  border-radius: 3px;
+  border: none;
+}
+.btn-hero-primary:hover {
+  background: #fb9a5c;
+  color: var(--tinta);
+}
+.btn-hero-secondary {
+  background: #b89cb2;
+  color: var(--tinta);
+  font-weight: 600;
+  border-radius: 3px;
+  border: none;
+}
+.btn-hero-secondary:hover {
+  background: #ab8ba4;
+  color: var(--tinta);
+}
+
+/* SOBRE MI */
+.sobre {
+  background: #ffece2;
+}
+
+.sobre p {
+  text-align: justify;
+}
+
+.photo-lg {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  box-shadow: 0 20px 50px rgba(58, 50, 56, 0.16);
+}
+
+/* SERVICIOS */
+.servicios {
+  background: #eaf2df;
+}
+.lead-text {
+  max-width: 62ch;
+  color: #5b5257;
+  /* font-size: 15.5px; */
+}
+
+.aspectos {
+  max-width: 780px;
+  row-gap: 6px;
+}
+.aspecto-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 14.5px;
+  padding: 9px 0;
+}
+.aspecto-item img {
+  width: 24px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.sesion-card {
+  border-radius: 6px;
+  padding: 30px 26px;
+}
+.sesion-card.s1 {
+  background: #f8ebd2;
+}
+.sesion-card.s2 {
+  background: #dce9cc;
+}
+.sesion-card .dur {
+  font-size: 12.5px;
+  color: var(--salvia-oscuro);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.sesion-card p {
+  /* font-size: 14px; */
+  color: #5b5257;
+}
+
+.tarifa-card {
+  border-radius: 6px;
+  padding: 34px 24px;
+}
+.tarifa-card.t1 {
+  background: #d1bfce;
+}
+.tarifa-card.t2 {
+  background: #b9d4ca;
+}
+.tarifa-card.t3 {
+  background: #ffccae;
+}
+.tarifa-card .nombre {
+  font-size: 14.5px;
+  font-weight: 600;
+}
+.tarifa-card .precio {
+  font-family: "DM Serif Display", serif;
+  font-size: 40px;
+  margin: 8px 0 4px;
+}
+.tarifa-card .detalle {
+  font-size: 12.5px;
+  color: #5b5257;
+  margin-top: 4px;
+}
+
+/* PARA TI */
+.para-ti {
+  background: #93bdaf;
+  color: var(--tinta);
+}
+.para-ti-list {
+  max-width: 620px;
+}
+.para-ti-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 15.5px;
+  padding: 8px 0;
+}
+.para-ti-list img {
+  width: 24px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* CONTACTO */
+.contacto {
+  background: #7f6a7a;
+  color: var(--crema);
+}
+.contacto h2 {
+  color: var(--crema);
+  font-size: 34px;
+  max-width: 34ch;
+}
+.contacto-caveat {
+  color: var(--crema);
+  max-width: 56ch;
+}
+
+.contact-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  padding: 18px 20px;
+  border-radius: 8px;
+  color: var(--tinta);
+  font-size: 14px;
+  height: 100%;
+  transition: transform 0.15s ease;
+}
+.contact-chip:hover {
+  transform: translateY(-3px);
+  color: var(--tinta);
+}
+.contact-chip.correo {
+  background: #d1bfce;
+}
+.contact-chip.whatsapp {
+  background: #b9d4ca;
+}
+.contact-chip.insta {
+  background: #ffccae;
+}
+.clabel {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.cvalue {
+  font-weight: 500;
+  word-break: break-word;
+  text-align: center;
+}
+
+.contacto-card {
+  background: var(--crema);
+  border-radius: 8px;
+  padding: 40px 30px;
+  max-width: 680px;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.14);
+}
+.form-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tinta);
+  margin-bottom: 18px;
+}
+.form-control:focus {
+  border-color: var(--salvia-oscuro);
+  box-shadow: 0 0 0 0.2rem rgba(63, 95, 88, 0.15);
+}
+.form-submit {
+  background: var(--tinta);
+  color: var(--crema);
+  font-weight: 600;
+  padding: 13px;
+  border-radius: 4px;
+  border: none;
+}
+.form-submit:hover {
+  background: #52464c;
+  color: var(--crema);
+}
+
+h3 {
+  color: var(--tinta);
+}
+
+/* FOOTER */
+.site-footer {
+  background: #fcf6e7;
+  color: var(--tinta);
+  font-size: 12.5px;
+  border-top: 1px solid rgba(58, 50, 56, 0.08);
+}
