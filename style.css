@@ -240,11 +240,17 @@ p {
   color: var(--tinta);
   font-size: 14px;
   height: 100%;
-  transition: transform 0.15s ease;
+  transition: transform 0.1s ease;
 }
 .contact-chip:hover {
   transform: translateY(-3px);
   color: var(--tinta);
+}
+.chip-icon {
+  width: 30px;
+  height: 30px;
+  color: var(--tinta);
+  margin-bottom: 4px;
 }
 .contact-chip.correo {
   background: #d1bfce;
@@ -301,10 +307,180 @@ h3 {
   color: var(--tinta);
 }
 
+.primera-capa {
+  font-size: xx-small;
+}
+
 /* FOOTER */
 .site-footer {
   background: #fcf6e7;
   color: var(--tinta);
   font-size: 12.5px;
   border-top: 1px solid rgba(58, 50, 56, 0.08);
+}
+.legal-links {
+  font-size: 12px;
+}
+.legal-links a {
+  color: var(--tinta);
+  text-decoration: underline;
+}
+.legal-links a:hover {
+  color: var(--salvia-oscuro);
+}
+
+/* COOKIE BANNER */
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -200px;
+  background: var(--tinta);
+  color: var(--crema);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  z-index: 1080;
+  transition: bottom 0.35s ease;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.18);
+}
+.cookie-banner.show {
+  bottom: 0;
+}
+.cookie-banner-text {
+  font-size: 13.5px;
+  max-width: 640px;
+  line-height: 1.5;
+}
+.cookie-banner-text a {
+  color: var(--mostaza);
+  text-decoration: underline;
+  margin-left: 4px;
+}
+.cookie-banner-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.btn-cookie-primary,
+.btn-cookie-secondary {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 22px;
+  font-weight: 600;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+.btn-cookie-primary {
+  background: #fdaa76;
+  color: var(--tinta);
+}
+.btn-cookie-secondary {
+  background: transparent;
+  color: var(--crema);
+  border: 1.5px solid var(--crema);
+}
+@media (max-width: 700px) {
+  .cookie-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ANIMACIONES */
+
+/* Aparición suave al hacer scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Entrada del hero al cargar */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+.fade-in-up.delay-1 {
+  animation-delay: 0.1s;
+}
+.fade-in-up.delay-2 {
+  animation-delay: 0.3s;
+}
+.fade-in-up.delay-3 {
+  animation-delay: 0.5s;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo con vida propia */
+.brand-logo {
+  transition: transform 0.35s ease;
+}
+.navbar-brand:hover .brand-logo {
+  transform: rotate(-8deg) scale(1.12);
+}
+
+/* Sombra progresiva de la barra superior */
+.site-header {
+  transition:
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+.site-header.scrolled {
+  box-shadow: 0 4px 18px rgba(58, 50, 56, 0.08);
+  background: rgba(252, 246, 231, 0.97);
+}
+
+/* Hover en tarjetas de sesiones y tarifas */
+.sesion-card,
+.tarifa-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.sesion-card:hover,
+.tarifa-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(58, 50, 56, 0.1);
+}
+
+/* Respeta la preferencia de quien desactiva animaciones */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .fade-in-up,
+  .brand-logo,
+  .wiggle-icon,
+  .site-header,
+  .sesion-card,
+  .tarifa-card {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Gesto de la mariposa repetido en los iconos de las listas y el footer */
+.wiggle-icon {
+  transition: transform 0.35s ease;
+}
+.aspecto-item:hover .wiggle-icon,
+.para-ti-list li:hover .wiggle-icon,
+.footer-logo-wrap:hover .wiggle-icon {
+  transform: rotate(-8deg) scale(1.15);
 }
